@@ -1,5 +1,5 @@
 To do:
-Add a function to click on that map and add a marker at that coordinate.
+Add a function to click on the map and add a marker at that coordinate.
 Allow for spots added with a marker to be filled out with info.
 Build out the website home page around the map.
 
