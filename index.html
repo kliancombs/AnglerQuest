@@ -52,8 +52,9 @@
 
 	const fishIcon = new LeafIcon({iconUrl: 'fish.png'});
 
+
 	map.on("click", function(e){
-		var marker = new L.marker([e.latlng.lat, e.latlng.lng], {icon: fishIcon}).addTo(map).on('click', e=> e.target.remove());
+		var marker = new L.marker([e.latlng.lat, e.latlng.lng],  {draggable: true, title: "new fishing spot", icon: fishIcon}).addTo(map).on('click', e=> e.target.remove());
 	})
 </script>
 </head>
