@@ -25,12 +25,13 @@
 		}
 	</style>
 
-	
 </head>
 <body>
 
 <div id='map'></div>
 
+<body>
+<head>
 <script>
 	const map = L.map('map').setView([38.1583333333, -79.0827777778], 13);
 
@@ -53,9 +54,12 @@
 
 	const mfish = L.marker([38.1583333333, -79.0827777778], {icon: fishIcon}).bindPopup('Tams lake').addTo(map);
 
+	map.on("click", function(e){
+		var marker = new L.marker([e.latlng.lat, e.latlng.lng], {icon: fishIcon}).addTo(map).on('click', e=> e.target.remove());
+	})
 </script>
-
-
+</head>
+</body>
 
 </body>
 </html>
